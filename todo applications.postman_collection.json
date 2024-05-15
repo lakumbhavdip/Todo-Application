@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "d0847c54-6233-45dd-8a12-d4a7054a5e02",
+		"name": "todo applications",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28880047"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"yashzadafiya5@gmail.com \",\r\n    \"password\":1234568\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"yashzadafiya5@gmail.com \",\r\n    \"password\":1234568\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}register"
+					},
+					"response": []
+				},
+				{
+					"name": "email verification ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/verify_email?email=yashzadafiya5@gmail.com%20&token=1cbec7473216138cbafb79cf972f3b6e10efc033",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"verify_email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "yashzadafiya5@gmail.com%20"
+								},
+								{
+									"key": "token",
+									"value": "1cbec7473216138cbafb79cf972f3b6e10efc033"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "todo",
+			"item": [
+				{
+					"name": "todo details",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token ef4ccaf11ca2c49e2363b712dc14fe23dc95cee2"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"title\":\"title\",\r\n    // \"description\":\"descriptions\",\r\n    \"category\":\"categories\"\r\n    // \"duedate\":\"2024-05-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}todo"
+					},
+					"response": []
+				},
+				{
+					"name": "update todo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token ef4ccaf11ca2c49e2363b712dc14fe23dc95cee2"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"title\":\"title\",\r\n    \"description\":\"descriptions\",\r\n    \"category\":\"categories\",\r\n    \"duedate\":\"2024-05-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}update_todo"
+					},
+					"response": []
+				},
+				{
+					"name": "add todo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token ef4ccaf11ca2c49e2363b712dc14fe23dc95cee2"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"title\",\r\n    \"description\":\"descriptions\",\r\n    \"category\":\"category\",\r\n    \"duedate\":\"2024-05-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}add_todo"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
